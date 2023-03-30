@@ -1,0 +1,23 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  margin: 82px 0;
+
+  &__img {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    margin-left: 33px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 24px;
+
+    @media only screen and (max-width: 767px) {
+      margin-left: 15px;
+      font-size: 18px;
+    }
+  }
+}

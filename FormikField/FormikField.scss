@@ -1,0 +1,238 @@
+@import 'src/scss/variables.scss';
+
+.field {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  &--currency {
+    width: 100%;
+
+    input {
+      padding: 0 60px 0 19px !important;
+    }
+  }
+
+  &--gallery {
+    margin-top: 37px;
+    width: 100%;
+  }
+
+  &.field--with-icon {
+    input {
+      padding-right: 55px;
+      padding-left: 63px;
+    }
+  }
+
+  &.field--file {
+    .field__label {
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+  }
+
+  &.field--error {
+    input,
+    textarea {
+      border-color: $pink;
+    }
+  }
+
+  &.field--copy {
+    input {
+      padding-right: 60px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 23px;
+    fill: #fff;
+    transition: fill 300ms;
+
+    .field__input:focus-within & {
+      fill: $pink;
+    }
+  }
+
+  &__copy-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 23px;
+    fill: $blue;
+    cursor: pointer;
+    transition: fill 300ms;
+
+    &:hover {
+      fill: $pink;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 7px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &--margin {
+      input {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  input,
+  textarea {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 24px;
+    height: 55px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #2f356d;
+    color: #fff;
+    font-size: 18px;
+    transition: 300ms;
+
+    &:focus {
+      border-color: $pink;
+    }
+
+    &:disabled,
+    &:read-only {
+      border-color: rgba(#2f356d, 0.2);
+      background-color: rgba(#2f356d, 0.2);
+      pointer-events: none;
+
+      &::placeholder {
+        color: #595b6c;
+      }
+    }
+
+    &::placeholder {
+      color: rgba(#fff, 0.5);
+    }
+  }
+
+  textarea {
+    resize: none;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 25px 18px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+  &__percent {
+    font-size: 18px;
+    position: absolute;
+    top: 18px;
+    right: 22px;
+  }
+
+  &__currency {
+    font-size: 18px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 18px;
+    right: 22px;
+  }
+
+  &__loupe {
+    background: none;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: 15px;
+    display: flex;
+    align-items: flex-start;
+    transition: 300ms;
+
+    &.active {
+      svg {
+        fill: $pink;
+      }
+    }
+
+    svg {
+      transition: 300ms;
+      width: 23px;
+      height: 23px;
+      fill: #fff;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    background: none;
+    cursor: pointer;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    right: 17px;
+    display: flex;
+    align-items: flex-start;
+
+    svg {
+      transition: 300ms;
+      fill: #fff;
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &__show-password {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    cursor: pointer;
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+    }
+
+    path {
+      transition: 300ms;
+    }
+
+    &:hover {
+      path {
+        fill: green;
+      }
+    }
+  }
+
+  &__error {
+    margin-top: 9px;
+    color: $pink;
+    font-size: 12px;
+    text-align: left;
+  }
+}

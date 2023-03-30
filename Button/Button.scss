@@ -1,0 +1,135 @@
+@import 'src/scss/variables.scss';
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  color: #000;
+  transition: 300ms;
+  font-size: 18px;
+  height: 50px;
+
+  &.btn-small {
+    height: 40px;
+  }
+
+  &.btn-blue {
+    background-color: $blue;
+
+    &:hover {
+      background-color: $blue-dark;
+      color: #fff;
+    }
+  }
+
+  &.btn-blue-outline {
+    border: 1px solid $blue;
+    background-color: none;
+    color: $blue;
+
+    &:hover {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+
+  &.btn-red {
+    background-color: $red;
+
+    &:hover {
+      background-color: $red-dark;
+      color: #fff;
+    }
+  }
+
+  &.btn-red-outline {
+    border: 1px solid $red;
+    background-color: none;
+    color: $red;
+
+    &:hover {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+
+  &.btn-pink {
+    background-color: $pink;
+
+    &:hover {
+      background-color: $red-dark;
+      color: #fff;
+    }
+  }
+
+  &.btn-pink-outline {
+    border: 1px solid $pink;
+    background-color: transparent;
+    color: $pink;
+
+    &:hover {
+      border-color: $pink;
+      background-color: $pink;
+      color: #fff;
+    }
+  }
+
+  &.btn-back {
+    width: 67px;
+    height: 40px;
+    border: 1px solid $pink;
+    background-color: transparent;
+
+    @media only screen and (max-width: 767px) {
+      width: 49px;
+      height: 29px;
+    }
+
+    &:hover {
+      border: 1px solid $blue;
+      background-color: $blue;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: $blue;
+      transition: 400ms;
+
+      @media only screen and (max-width: 767px) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &.btn-loading {
+    border-color: #0670b8;
+    background-color: #0670b8;
+    color: #fff;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:disabled {
+    border-color: $blue-dark;
+    background-color: $blue-dark;
+    color: #fff;
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: $blue-dark;
+      background-color: $blue-dark;
+      color: #fff;
+    }
+  }
+}

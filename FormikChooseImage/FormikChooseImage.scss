@@ -1,0 +1,66 @@
+@import 'src/scss/variables.scss';
+
+.choose-image {
+  &__block {
+    display: flex;
+    align-items: center;
+    width: 216px;
+    height: 50px;
+    padding-left: 21px;
+    border: 1px solid $pink;
+    border-radius: 27.5px;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+      border: 1px solid $blue;
+      background-color: $blue;
+
+      .choose-image--has-value & {
+        border-color: $blue-dark;
+        background-color: $blue-dark;
+      }
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    svg {
+      width: 25px;
+      height: 21px;
+      fill: $pink;
+      transition: fill 300ms;
+    }
+
+    .choose-image--has-value & {
+      justify-content: center;
+      padding: 0 10px;
+      border-color: $blue-dark;
+      background-color: $blue;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__name {
+    display: block;
+    margin-left: 20px;
+    color: $pink;
+    font-size: 18px;
+    transition: color 300ms;
+
+    .choose-image:hover & {
+      color: #fff;
+    }
+  }
+
+  &__error {
+    margin-top: 9px;
+    color: $pink;
+    font-size: 12px;
+    text-align: left;
+  }
+}

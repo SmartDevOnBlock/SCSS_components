@@ -1,0 +1,130 @@
+@import 'src/scss/variables.scss';
+
+.category-card {
+  position: relative;
+  cursor: pointer;
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 150px;
+    padding: 0 15px 0 44px;
+    border-radius: 20px;
+    background-color: #0d0c1e;
+    transition: 300ms;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1300px) {
+      height: 115px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      height: 142px;
+      padding: 0 15px 0 42px;
+    }
+
+    .category-card:hover & {
+      background-color: $blue;
+    }
+  }
+
+  &__name {
+    width: 166px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 24px;
+
+    @media only screen and (max-width: 1300px) {
+      width: 128px;
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: 158px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      width: 128px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    max-width: 242px;
+
+    @media only screen and (max-width: 1300px) {
+      justify-content: flex-end;
+      img {
+        max-width: 78%;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      img {
+        max-width: 93%;
+      }
+    }
+  }
+
+  &__bg {
+    &-pink {
+      position: absolute;
+      top: -73px;
+      right: -39px;
+      transform: rotate(38.21deg);
+      width: 180px;
+      height: 140px;
+      background-color: $pink;
+      filter: blur(38px);
+
+      @media only screen and (max-width: 1300px) {
+        top: -44px;
+        right: -6px;
+        width: 137px;
+        height: 110px;
+        filter: blur(32px);
+      }
+
+      @media only screen and (max-width: 767px) {
+        top: -56px;
+        right: -29px;
+        width: 171px;
+        height: 138px;
+        filter: blur(48px);
+      }
+    }
+
+    &-blue {
+      position: absolute;
+      right: 91px;
+      bottom: -35px;
+      transform: rotate(-45deg);
+      width: 119px;
+      height: 96px;
+      background-color: $blue;
+      filter: blur(45px);
+
+      @media only screen and (max-width: 1300px) {
+        right: 64px;
+        bottom: -12px;
+        width: 90px;
+        height: 73px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        right: 78px;
+        bottom: -16px;
+        width: 113px;
+        height: 91px;
+        filter: blur(53px);
+      }
+    }
+  }
+}
